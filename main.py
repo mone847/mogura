@@ -40,7 +40,8 @@ def update_mogura():
     if not game["hide"]:
         # モグラの位置をランダムに決定
         game["mx"]=random.randint(0, canvas.width - WIDTH)
-        game["my"]=random.randint(0, canvas.height - WIDTH)
+        # サンプル画像に合わせて上から1／4を外す
+        game["my"]=random.randint(100, canvas.height -100 - WIDTH)
 
 def update_screen():
     """画面を描画する関数"""

@@ -4,7 +4,7 @@ from js import setTimeout, document
 # 定数宣言
 GAME_TURNS=30
 INTERVAL=1000  # モグラの出現間隔（ミリ秒）
-WIDTH=50 # モグラの横幅
+WIDTH=50 # モグラのサイズ（正方形）
 
 # infoの要素の取得
 info=document.getElementById("info")
@@ -41,7 +41,7 @@ def update_mogura():
         # モグラの位置をランダムに決定
         game["mx"]=random.randint(0, canvas.width - WIDTH)
         # サンプル画像に合わせて上から1／4を外す
-        game["my"]=random.randint(110, canvas.height - WIDTH)
+        game["my"]=random.randint(100, canvas.height - WIDTH)
 
 def update_screen():
     """画面を描画する関数"""
